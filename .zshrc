@@ -34,7 +34,7 @@ for alias_file in ~/.config/zsh/aliases/*.zsh; do
 done
 
 # Activate mise
-eval "$(~/.local/bin/mise activate zsh)"
+eval "$(mise activate zsh)"
 
 # Activate Oh My Posh
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/starfield.omp.json)"

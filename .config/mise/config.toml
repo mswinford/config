@@ -6,3 +6,6 @@ node = "24"
 pnpm = "latest"
 python = "latest"
 tmux = "latest"
+
+[env]
+_.file = "~/.env"
