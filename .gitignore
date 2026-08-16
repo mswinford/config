@@ -1,11 +1,18 @@
 # Ignore Everything
-*
+/*
 
 # Allow .gitignore
 !.gitignore
 
 # Allow config files/directories I want tracked
 !.zshrc
-!.config/
-!.config/**
 
+# Allow .config directory
+!/.config
+
+# Ignore everything in the .config directory
+/.config/*
+
+# Allow specific config directories
+!/.config/mise
+!/.config/nvim
