@@ -16,3 +16,4 @@
 # Allow specific config directories
 !/.config/mise
 !/.config/nvim
+!/.config/oh-my-posh
