@@ -1,0 +1,8 @@
+[tools]
+bat = "latest"
+fzf = "latest"
+ghcup = "latest"
+node = "24"
+pnpm = "latest"
+python = "latest"
+tmux = "latest"
