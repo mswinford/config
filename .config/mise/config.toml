@@ -1,11 +1,8 @@
 [tools]
 bat = "latest"
 fzf = "latest"
-ghcup = "latest"
-node = "latest"
-pnpm = "latest"
+node = "22"
 python = "latest"
-tmux = "latest"
 
 [env]
 _.file = "~/.env"
