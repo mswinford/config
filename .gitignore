@@ -1,0 +1,11 @@
+# Ignore Everything
+*
+
+# Allow .gitignore
+!.gitignore
+
+# Allow config files/directories I want tracked
+!.zshrc
+!.config/
+!.config/**
+
