@@ -5,14 +5,7 @@ SAVEHIST=$HISTSIZE
 
 setopt hist_ignore_all_dups
 
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/michael/.config/zsh/completion.zsh'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-
-source $HOME/.config/zsh/completion.zsh
+source ~/.config/zsh/completion.zsh
 
 # PATH
 export PATH=$PATH:$HOME/.local/bin

@@ -17,3 +17,7 @@
 !/.config/mise
 !/.config/nvim
 !/.config/oh-my-posh
+!/.config/zsh
+
+# Ignore automatically generated backup files
+*~

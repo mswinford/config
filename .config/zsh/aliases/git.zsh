@@ -1,0 +1,6 @@
+alias gcb='git checkout -b'
+alias gco='git checkout'
+alias gst='git status'
+alias ga='git add'
+alias gcm='git commit -m'
+alias gpsup='git push --set-upstream origin $(git branch --show-current)'
