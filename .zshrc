@@ -32,13 +32,12 @@ eval "$(mise activate zsh)"
 # Activate Oh My Posh
 eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/starfield.omp.json)"
 
+# Activate Zoxide
+eval "$(zoxide init zsh)"
+
+# Activate Atuin
+eval "$(atuin init zsh)"
+
+
 export EDITOR='nvim'
 export VISUAL='nvim'
-
-# pnpm
-export PNPM_HOME="/home/michael/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME/bin:"*) ;;
-  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
-esac
-# pnpm end

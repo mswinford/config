@@ -1,11 +1,15 @@
 [tools]
+atuin = "latest"
 bat = "latest"
+fd = "latest"
 fzf = "latest"
 ghcup = "latest"
 node = "latest"
 pnpm = "latest"
 python = "latest"
+ripgrep = "latest"
 tmux = "latest"
+zoxide = "latest"
 
 [env]
 _.file = "~/.env"

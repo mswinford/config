@@ -18,6 +18,7 @@
 !/.config/nvim
 !/.config/oh-my-posh
 !/.config/zsh
+!/.config/tmux
 
 # Ignore automatically generated backup files
 *~
