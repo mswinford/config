@@ -41,3 +41,9 @@ eval "$(atuin init zsh)"
 
 export EDITOR='nvim'
 export VISUAL='nvim'
+
+
+
+# IMPORTANT: This must be the last line in this file
+# Auto run tmux
+[[ -z "$TMUX" ]] && tmux new-session -A -s main
