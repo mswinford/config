@@ -29,9 +29,7 @@ return {
             { icon = " ", key = "q", desc = "Quit", action = ":qa" },
           },
           projects = {
-            opts = {
-              limit = 10,
-            },
+            opts = {},
           },
         },
         -- stylua: ignore
@@ -39,8 +37,13 @@ return {
         sections = {
           { section = "header" },
           { section = "keys", gap = 0, padding = 1 },
-          { icon = " ", title = "Projects", section = "projects", limit = 6, indent = 2, padding = 1 },
+          { icon = " ", title = "Projects", section = "projects", limit = 10, indent = 2, padding = 1 },
           { section = "startup" },
+        },
+      },
+      {
+        lazygit = {
+          configure = true,
         },
       },
     },
