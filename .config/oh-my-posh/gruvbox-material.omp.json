@@ -1,0 +1,230 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "background": "#282828",
+    "foreground": "#dfd0b2",
+    "black": "#282828",
+    "red": "#ea6962",
+    "green": "#a9b665",
+    "yellow": "#d8a657",
+    "blue": "#7daea3",
+    "magenta": "#d3869b",
+    "cyan": "#89b482",
+    "white": "#dfd0b2",
+    "starfield-red": "#c72138",
+    "starfield-orange": "#e06236",
+    "starfield-gold": "#d7a64b",
+    "starfield-blue": "#304c7a"
+  },
+  "secondary_prompt": {
+    "template": " \uf0da"
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "\u256d\u2500"
+        },
+        {
+          "type": "session",
+          "style": "plain",
+          "template": "{{ if .Root }}[<p:red>\uf0e7</>]{{ end }}[{{ .UserName }}@{{ .HostName }}]"
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "template": "[{{ .Path }}]",
+          "options": {
+            "style": "agnoster_short",
+            "max_depth": 2
+          }
+        },
+        {
+          "type": "root",
+          "style": "plain",
+          "template": "<p:white>\u2500(</>#<p:white>)</>"
+        }
+      ]
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "node",
+          "style": "plain",
+          "template": "({{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }})",
+          "options": {
+            "fetch_package_manager": true,
+            "npm_icon": "<#cb3837>\ue5fa</>",
+            "yarn_icon": "<#348cba>\ue6a7</>",
+            "pnpm_icon": "<p:yellow>\ue865</>"
+          }
+        },
+        {
+          "foreground": "#FFE873",
+          "style": "plain",
+          "template": "<p:white>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}<p:white>)</>",
+          "type": "python"
+        },
+        {
+          "foreground": "#ec2729",
+          "style": "plain",
+          "template": "<p:white>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<p:white>)</>",
+          "type": "java"
+        },
+        {
+          "foreground": "#0d6da8",
+          "style": "plain",
+          "template": "<p:white>(</>{{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }}<p:white>)</>",
+          "type": "dotnet"
+        },
+        {
+          "foreground": "#06aad5",
+          "style": "plain",
+          "template": "<p:white>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<p:white>)</>",
+          "type": "go"
+        },
+        {
+          "foreground": "#925837",
+          "style": "plain",
+          "template": "<p:white>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<p:white>)</>",
+          "type": "rust"
+        },
+        {
+          "foreground": "#055b9c",
+          "style": "plain",
+          "template": "<p:white>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<p:white>)</>",
+          "type": "dart"
+        },
+        {
+          "foreground": "#ce092f",
+          "style": "plain",
+          "template": "<p:white>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<p:white>)</>",
+          "type": "angular"
+        },
+        {
+          "foreground": "#de1f84",
+          "style": "plain",
+          "template": "<p:white>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<p:white>)</>",
+          "type": "aurelia"
+        },
+        {
+          "foreground": "p:white",
+          "style": "plain",
+          "template": "<#1e293b>(</>{{ if .Error }}{{ .Error }}{{ else }}Nx {{ .Full }}{{ end }}<#1e293b>)</>",
+          "type": "nx"
+        },
+        {
+          "foreground": "#359a25",
+          "style": "plain",
+          "template": "<p:white>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<p:white>)</>",
+          "type": "julia"
+        },
+        {
+          "foreground": "#9c1006",
+          "style": "plain",
+          "template": "<p:white>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<p:white>)</>",
+          "type": "ruby"
+        },
+        {
+          "foreground": "#5398c2",
+          "style": "plain",
+          "template": "<p:white>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<p:white>)</>",
+          "type": "azfunc"
+        },
+        {
+          "foreground": "#faa029",
+          "style": "plain",
+          "template": "<p:white>(</>{{.Profile}}{{if .Region}}@{{.Region}}{{end}}<p:white>)</>",
+          "type": "aws"
+        },
+        {
+          "foreground": "#316ce4",
+          "style": "plain",
+          "template": "<p:white>(</>{{.Context}}{{if .Namespace}}::{{.Namespace}}{{end}}<p:white>)</>",
+          "type": "kubectl"
+        },
+        {
+          "foreground": "p:white",
+          "foreground_templates": [
+            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
+            "{{if eq \"Discharging\" .State.String}}#FFFB38{{end}}",
+            "{{if eq \"Full\" .State.String}}#33DD2D{{end}}"
+          ],
+          "options": {
+            "charged_icon": "\uf240 ",
+            "charging_icon": "\uf1e6 ",
+            "discharging_icon": "\ue234 "
+          },
+          "style": "plain",
+          "template": "<p:white>[</>{{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}%<p:white>]</>",
+          "type": "battery"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "{{ if .Segments.Git }}\u2502 {{ end }}"
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "templates": [
+            "[",
+            "{{ if .BranchStatus }}{{ .BranchStatus }} {{ end }}",
+            "{{ .HEAD }}",
+            "{{ if .Staging.Changed }}<p:green> \u25cf {{ .Staging.String }}</>{{ end }}",
+            "{{ if .Working.Changed }}<p:orange> \u25cf {{ .Working.String }}</>{{ end }}",
+            "]"
+          ],
+          "options": {
+            "branch_icon": "\ue725 ",
+            "branch_ahead_icon": "\uf176",
+            "branch_behind_icon": "\uf175",
+            "branch_identical_icon": "",
+            "branch_gone_icon": "",
+            "fetch_status": true,
+            "fetch_push_status": true,
+            "fetch_upstream_icon": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "\u2570"
+        },
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "p:white",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}p:red{{ end }}"
+          ],
+          "template": "\uf0da",
+          "options": {
+            "always_enabled": true
+          }
+        }
+      ]
+    }
+  ],
+  "version": 4
+}
