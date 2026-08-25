@@ -17,8 +17,9 @@
 !/.config/mise
 !/.config/nvim
 !/.config/oh-my-posh
-!/.config/zsh
 !/.config/tmux
+!/.config/zellij
+!/.config/zsh
 
 # Ignore automatically generated backup files
 *~
