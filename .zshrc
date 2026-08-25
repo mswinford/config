@@ -30,7 +30,7 @@ done
 eval "$(mise activate zsh)"
 
 # Activate Oh My Posh
-eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/starfield.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/gruvbox-material.omp.json)"
 
 # Activate Zoxide
 eval "$(zoxide init zsh)"
@@ -46,4 +46,4 @@ export VISUAL='nvim'
 
 # IMPORTANT: This must be the last line in this file
 # Auto run tmux
-[[ -z "$TMUX" ]] && tmux new-session -A -s main
+# [[ -z "$TMUX" ]] && tmux new-session -A -s main
